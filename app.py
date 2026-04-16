@@ -29,6 +29,9 @@ def simulate_inputs():
   '''
   TODO : Complete model training and adjust this as input
   Function that simulates sensor data readings
+
+  for context: the dataset has...
+  Sensors (27): Accelerometers placed at various locations on the bridge
   '''
   return None
 
@@ -39,7 +42,7 @@ def main():
   • part of the GRU
   both parts is able to simulate a given input and returns the result of it.
   '''
-  st.write("""# Poultry Defect Detection System""")
+  st.write("""# Bridge Health Detection Application""")
   modelA = RNN_LSTM()
   modelB = GRU()
 
