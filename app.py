@@ -45,6 +45,18 @@ def main():
   st.write("""# Bridge Health Detection Application""")
   modelA = RNN_LSTM()
   modelB = GRU()
+  option = st.radio(
+    "Use the Model to be applied:",
+    ("RNN+LSTM", "GRU")
+  )
+
+  if st.button("Run Model"):
+    st.write("Running your model...")
+
+  if st.button("Reset"):
+    st.write("Resetting...")
+
+  st.write('the area below will the output for the simulated input')
 
 if __name__ == "__main__":
   main()
