@@ -76,6 +76,10 @@ def main():
   st.write("Select a model and simulate structural health forecasting.")
   LSTM = Load_LSTM()
   GRU = Load_GRU()
+  if LSTM is None:
+    st.warning("LSTM model failed to load")
+  if GRU is None:
+    st.warning("GRU model failed to load")
   option = st.radio(
     "Use the Model to be applied:",
     ("LSTM", "GRU")
@@ -105,7 +109,7 @@ def main():
     st.success("Done!")
 
   if st.button("Reset"):
-    st.experimental_rerun()
+    st.rerun()
 
 if __name__ == "__main__":
   main()
